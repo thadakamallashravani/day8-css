@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+  height: 390px;
+  width: 800px;
+  margin-left: 26%;
+  display: flex;
+  justify-content: center;
+}
+
+.ball-1, .ball-2, .ball-3 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 2px;
+  animation-name: bounce;
+  animation: bounce 0.5s infinite alternate;
+}
+.ball-1,.ball-2,.ball-3{
+  margin-top: 300px;
+}
+.ball-2{
+  animation-delay: 150ms;
+}
+.ball-3{
+  animation-delay: 300ms;
+}
+.btn{
+  margin-left: 50%;
+  height: 500px;
+}
+.btn-1{
+  width: 10px;
+  height: 10px;
+  background-color: aqua;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+  display: inline-block;
+  margin-left: 5px;
+  align-content: center;
+}
+.btn-1:nth-child(1){
+  animation: preloader 1s ease-in infinite alternate;
+  animation-delay: 0s;
+}
+.btn-1:nth-child(2){
+  animation: preloader 1s ease-in-out infinite alternate;
+  animation-delay: 0.9s;
+}
+.btn-1:nth-child(3){
+  animation: preloader 1s ease-out infinite alternate;
+  animation-delay: 1.5s;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  
+  100%{
+    transform: translateY(-100px);
+  }
+}
+@keyframes preloader{
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  50%{
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball-1"></div>
+        <div class="ball-2"></div>
+        <div class="ball-3"></div>
+      </div>
+      <div class="btn">
+        <div class="btn-1"></div>
+        <div class="btn-1"></div>
+        <div class="btn-1"></div>
+      </div>
+</body>
+</html> 
+      
